@@ -9,15 +9,41 @@
 </head>
 <body>
     <script>
+        lat = 1 ;
+        lon = 1 ;
+        apiK = "0a3503cab55ea599bdb96158ea8798d8" ; 
+
+
         $.ajax({
-            url:"https://api.openweathermap.org/data/2.5/forecast?lat=1&lon=1&appid=e0bd00bbc58c6785fc45af6d14859011",
+            url:"https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid="+apiK,
             dataType: "json",
-            success:function(clima){
-                climaMax = [];
-                cimaMin = [];
+            success:function(clima)
+            {
+                tempMax = 0;
+                tempMin = 0;
                 clima = clima['list'];
-                console.log(clima);
+
+                clima.forEach(function(el1){
+
+                el1 = el1['main']['temp_max']
+
+                    if(el1 > tempMax){
+                        tempMax = el1
+                    }
+                
+                el1 = el1['main']['temp_min']
+
+                    if(el1 > tempMin){
+                        tempMin = el1
+                    }
+                
+                
+                    
+                    
+                })
+                console.log(tempMax);
             }
+                
         })
     </script>
 </body>
