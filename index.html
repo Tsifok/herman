@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="ahttps://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
     <script>
@@ -19,29 +19,29 @@
             dataType: "json",
             success:function(clima)
             {
-                tempMax = 0;
-                tempMin = 0;
                 clima = clima['list'];
 
+                temp_max_base = clima[0]['main']['temp_min'];
+                temp_min_base = clima[0]['main']['temp_max'];
+
                 clima.forEach(function(el1){
-
-                el1 = el1['main']['temp_max']
-
-                    if(el1 > tempMax){
-                        tempMax = el1
+                
+                min = el1['main']['temp_min'];
+                max = el1['main']['temp_max'];
+                
+                    if(max > temp_max_base){
+                        temp_max_base = max;
                     }
                 
-                el1 = el1['main']['temp_min']
-
-                    if(el1 > tempMin){
-                        tempMin = el1
+                    if(temp_min_base > min){    
+                        temp_min_base = min;
                     }
                 
                 
                     
                     
                 })
-                console.log(tempMax);
+                console.log("La temperatura maxima fue "+temp_max_base +" y la temperatura minima fue "+temp_min_base);
             }
                 
         })
