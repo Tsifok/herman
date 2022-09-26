@@ -1,0 +1,21 @@
+.hola{
+    text-align: center;
+}
+
+.datos{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.card{
+    margin-right: 20px;
+    margin-bottom: 5%;
+}
+body{
+    background-image: url(../img/sol.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

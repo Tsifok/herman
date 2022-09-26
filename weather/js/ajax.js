@@ -9,6 +9,7 @@ $(document).ready(function () {
         success:function(clima){
             
             //cosas que se declaran para tener una base con la que comparar
+            texto = ''
             i = 1;          
             clima = clima['list'];
             temp_actual = clima[0]['main']['temp'];
@@ -32,7 +33,7 @@ $(document).ready(function () {
                                 case "Clear":
                                     tiempo = "http://openweathermap.org/img/wn/01d@2x.png";
                                 break;
-                                case "Cloud":
+                                case "Clouds":
                                     tiempo = "http://openweathermap.org/img/wn/03d@2x.png";
                                 break;
                                 case "Thunderstorm":
@@ -45,7 +46,7 @@ $(document).ready(function () {
                                     tiempo = "http://openweathermap.org/img/wn/50d@2x.png";
                                 break;
                                 default:
-                                    tiempo = ""
+                                    tiempo = "https://w7.pngwing.com/pngs/388/487/png-transparent-computer-icons-graphy-img-landscape-graphy-icon-miscellaneous-angle-text.png"
                                 break;
                             }
                            
@@ -57,17 +58,31 @@ $(document).ready(function () {
                         }
                     }
                     else{
+                        if(i <=6){
+                        document.getElementById("datos").innerHTML += `<div class="card" style="width: 14rem;">
+                        <img class="card-img-top" id="img_dia${i}" src="" alt="img">
+                        <div class="card-body">
+                        <p class="card-text" id="dia${i}"></p>
+                        </div>
+                        </div>`
                         document.getElementById("dia"+i).innerHTML = "MAX de "+temp_b_max+"°C <br> MIN de "+temp_b_min+"°C <br> del dia "+diasb;
-                        console.log(tiempo);
-                        $("#img_dia1").attr("src",tiempo);
-                        diasb++ ;
-                        i++;
+                        $("#img_dia"+i).attr("src",tiempo);
+                        diasb = dias
+                            i ++;
+                         if(i <6){
+                            temp_b_max = 0;
+                            temp_b_min = 100; 
+                         }
+
+                        }
+                        
                     }
+                    
+                    
 
             });            
 
         }
-            
     })
 
 });
