@@ -17,9 +17,13 @@ $start = ($pag-1) * MAX_ROW_PAG;
 
 $query_select = "SELECT * FROM mil_registros LIMIT ".$start.",".MAX_ROW_PAG;
 $result = mysqli_query($conn,$query_select);
+if(!$result){ mysqli_error($conn); }
 
 while($rows = mysqli_fetch_all($result)){
-    echo "<td>".$row."</td>";
+    if(isset($rows)){
+        echo "<th>".$rows['id']."</th><td>".$rows['content']."</td>";
+    }
+    
 }
 
 
