@@ -26,11 +26,11 @@
         </li>
         <?php echo ($pag == 1 ? "" : '<li class="page-item"><a class="page-link" href="index.php?pag=1">First</a></li>');?>
         
-        <li class="page-item"><a class="page-link" href="index.php?pag=<?php echo ($pag == 1 ? $num = $pag : ($pag <= 3 ? $num = 1 : $num = $pag-2)); ?>"><?php echo $num?></a></li>
-        <li class="page-item"><a class="page-link" href="index.php?pag=<?php echo ($pag == 1 ? $num = $pag+ 1 : ($pag == 2 ? $num = $pag : $num = $pag-1 )); ?>"><?php echo $num?></a></li>
-        <li class="page-item"><a class="page-link" href="index.php?pag=<?php echo ($pag == 1 ? $num = $pag +2 : ($pag == 2 ? $num = $pag+ 1 : $num = $pag));?>"><?php echo $num; ?></a></li>
-        <li class="page-item"><a class="page-link" href="index.php?pag=<?php echo ($pag == 1 ? $num = $pag+3 : ($pag == 2 ? $num = $pag + 2 : $num = $pag+1)); ?>"><?php echo $num; ?></a></li>
-        <li class="page-item"><a class="page-link" href="index.php?pag=<?php echo ($pag == 1 ? $num = $pag+4 : ($pag == 2 ? $num = $pag + 3 : $num = $pag+2)); ?>"><?php echo $num; ?></a></li>
+        <li class="page-item"><a class="page-link" href="index.php?pag=<?php echo ($pag >= $total_pages-2 ? $num = $pag-4 : ($pag == 1 ? $num = $pag : ($pag <= 3 ? $num = 1 : $num = $pag-2))); ?>"><?php echo $num?></a></li>
+        <li class="page-item"><a class="page-link" href="index.php?pag=<?php echo ($pag >= $total_pages-2 ? $num = $pag-3 : ($pag == 1 ? $num = $pag+ 1 : ($pag == 2 ? $num = $pag : $num = $pag-1 ))); ?>"><?php echo $num?></a></li>
+        <li class="page-item"><a class="page-link" href="index.php?pag=<?php echo ($pag >= $total_pages-2 ? $num = $pag-2 : ($pag == 1 ? $num = $pag +2 : ($pag == 2 ? $num = $pag+ 1 : $num = $pag)));?>"><?php echo $num; ?></a></li>
+        <li class="page-item"><a class="page-link" href="index.php?pag=<?php echo ($pag >= $total_pages-2 ? $num = $pag-1 : ($pag == 1 ? $num = $pag+3 : ($pag == 2 ? $num = $pag + 2 : $num = $pag+1))); ?>"><?php echo $num; ?></a></li>
+        <li class="page-item"><a class="page-link" href="index.php?pag=<?php echo ($pag >= $total_pages-2 ? $num = $pag : ($pag == 1 ? $num = $pag+4 : ($pag == 2 ? $num = $pag + 3 : $num = $pag+2))); ?>"><?php echo $num; ?></a></li>
         
         <?php echo ($pag == $total_pages ? "" : '<li class="page-item"><a class="page-link" href="index.php?pag='.$total_pages.'">Last</a></li>');?>
         <li class="page-item <?php echo($pag == $total_pages ? 'disabled' : '');?>">
