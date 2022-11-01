@@ -4,9 +4,8 @@ require_once "setting.php";
 $select = "SELECT * FROM mil_registros";
 $query_num_rows = mysqli_query($conn,$select);
 if(!$query_num_rows){mysqli_error($conn);}
-
-$total_pages = mysqli_num_rows($query_num_rows);
 define("MAX_ROW_PAG",   10);
+$total_pages = ceil(mysqli_num_rows($query_num_rows)/MAX_ROW_PAG);
 
 if(isset($_GET['pag'])){
     $pag = $_GET['pag'];
@@ -19,23 +18,9 @@ $query_select = "SELECT * FROM mil_registros LIMIT ".$start.",".MAX_ROW_PAG;
 $result = mysqli_query($conn,$query_select);
 if(!$result){ mysqli_error($conn); }
 
-while($rows = mysqli_fetch_all($result)){
-    if(isset($rows)){
-        echo "<th>".$rows['id']."</th><td>".$rows['content']."</td>";
-    }
-    
+$a = mysqli_fetch_all($result, MYSQLI_ASSOC);
+foreach($a as $valores){
+    echo "<tr><th>".$valores['id']."</th><td>".$valores['content']."</td></tr>";
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-?>

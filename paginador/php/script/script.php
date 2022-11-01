@@ -1,5 +1,5 @@
 <?php
-require_once "setting.php";
+require_once "../setting.php";
 //require_once("setting.php");
 $str = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -9,7 +9,7 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); // muestra excepcione
 mysqli_begin_transaction($conn); // query el cual no debe fallar y es un insert grande
 try { // intenta esto
     for ($i = 0; $i <= 1000; $i++) {
-        $insert = "INSERT INTO mil_registros(contenido) VALUES('" . str_shuffle($str) . "')";
+        $insert = "INSERT INTO mil_registros(content) VALUES('" . str_shuffle($str) . "')";
         $query = mysqli_real_query($conn, $insert);
     }
     mysqli_commit($conn);

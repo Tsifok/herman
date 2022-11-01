@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-11-2022 a las 13:00:15
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 8.1.6
+-- Tiempo de generación: 01-11-2022 a las 17:48:14
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,8 +40,28 @@ CREATE TABLE `materias` (
 
 CREATE TABLE `mil_registros` (
   `id` int(11) NOT NULL,
-  `contenido` varchar(300) NOT NULL
+  `content` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `reports`
+--
+
+CREATE TABLE `reports` (
+  `id` int(11) NOT NULL,
+  `rep_why` varchar(20) NOT NULL,
+  `description` varchar(600) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `reports`
+--
+
+INSERT INTO `reports` (`id`, `rep_why`, `description`) VALUES
+(1, 'porquese', 'sadfasdfasdf'),
+(2, 'cont_sex', 'sadfsadfsad');
 
 --
 -- Índices para tablas volcadas
@@ -60,6 +80,12 @@ ALTER TABLE `mil_registros`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `reports`
+--
+ALTER TABLE `reports`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -74,6 +100,12 @@ ALTER TABLE `materias`
 --
 ALTER TABLE `mil_registros`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `reports`
+--
+ALTER TABLE `reports`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
