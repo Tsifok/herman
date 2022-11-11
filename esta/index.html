@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jQuery.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="lol">
+        <form method="post" id="form_reports">
+            <input type="radio" name="rep_why" id="cont_sex" value="cont_sex" checked>
+            <label for="cont_sex">Contenido sexual</label><br>
+            <input type="radio" name="rep_why" id="abus_men" value="abus_men">
+            <label for="abus_men">Abuso de menores</label><br>
+            <textarea name="description" id="description" required cols="30" rows="10" class="modal_form_textarea" placeholder="Agregar descripcion especifica de la infraccion" maxlength="500"></textarea>
+            <br>
+            <button id="btn_form_report">Enviar</button>
+        </form>
+    </div>
+    <script src="js/ajax.js"></script>
+    <div id="result"></div>
+
+</body>
+</html>
