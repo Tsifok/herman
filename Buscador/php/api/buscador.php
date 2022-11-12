@@ -2,10 +2,19 @@
 
 require_once "../controllers/conexion.php";
 
-$select = "SELECT * FROM mil_registros WHERE content LIKE '%".$_POST['content']."%' ";
+    $i = 0;
+    $select = "SELECT * FROM mil_registros LIMIT 0,10 ";
 
-$result = mysqli_query($conn,$select);
+    $result = mysqli_query($conn,$select);
 
-if(!$result){
-    echo json_encode($result);
-}
+    if(!$result){
+        die('Error de Consulta' . mysqli_error($conn));
+    }
+
+    while($res = mysqli_fetch_assoc($result)){
+        $message[$i] = $res;
+        $i++;
+    }
+    
+    return print_r(json_encode($message));
+
