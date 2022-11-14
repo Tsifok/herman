@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-    $('#form_reports').submit(function(e){
-        document.getElementById("lol").style.display= 'none'
+    $('.formulario-r').submit(function(e){
+        document.getElementById("padre-modal").style.display= 'none'
 
         let rep_why = $('input[name=rep_why]:checked').val();
         let description = $('#description').val();
@@ -9,8 +9,9 @@ $(document).ready(function(){
             rep_why: rep_why,
             description: description,    
         }
+        console.log(postData);
         $.post("php/insert_reports.php",postData,function (response){
-            console.log(response);
+            console.log(response+"   "+postData['rep_why']);
         });
         e.preventDefault();
     });

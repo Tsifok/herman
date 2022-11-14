@@ -10,5 +10,8 @@
         if(!$query){
             die("mal la consulta");
         }
+        else{
+            echo "Se an insertado correctamente los datos";
+        }
     }
 ?>
