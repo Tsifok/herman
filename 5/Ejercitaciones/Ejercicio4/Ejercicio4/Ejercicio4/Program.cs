@@ -29,7 +29,7 @@ namespace Ejercicio4
             for (int i = 1; i <= cantObj; i++)
             {
                 
-                if (comparador < i || i == cantObj){
+                if (comparador < i || i != cantObj){
                     Console.WriteLine("Ahora ingrese el siguinte objeto");
                     comparador  = i;
                 }
@@ -45,18 +45,19 @@ namespace Ejercicio4
                 anteojo.aumento = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Ahora que precio tendra");
                 anteojo.precio = Convert.ToInt32(Console.ReadLine());
+                anteojo.mostrarDatos();
             }
 
 
 
-                              
             
-            
+
+
             /*
             anteojos anteojo = new anteojos(
                 Console.ReadLine(),15,"titanio",3,1500
             );
-            */                        
+            */
             Console.ReadLine();
         }
                     
@@ -75,12 +76,12 @@ namespace Ejercicio4
             public int precio;
                 
             //metodos
-            /*
+            
             public void mostrarDatos()
             {
-                Console.WriteLine("el auto marca { 0} color { 1} con patente { 2} pesa { 3} kilos", color, ancho, material, aumento, preico);
+                Console.WriteLine("El anteojo es de color {0} , con un ancho de {1} , esta hecho de {2} , tiene un aumento de {3} puntos y vale {4}",color,ancho,material,aumento,precio);
             }
-            */
+            
         }                
     }
 }
