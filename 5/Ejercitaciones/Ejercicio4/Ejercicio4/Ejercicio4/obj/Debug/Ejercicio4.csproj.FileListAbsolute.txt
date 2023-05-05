@@ -1,0 +1,8 @@
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio4\Ejercicio4\Ejercicio4\obj\Debug\Ejercicio4.csproj.AssemblyReference.cache
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio4\Ejercicio4\Ejercicio4\obj\Debug\Ejercicio4.csproj.SuggestedBindingRedirects.cache
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio4\Ejercicio4\Ejercicio4\obj\Debug\Ejercicio4.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio4\Ejercicio4\Ejercicio4\bin\Debug\Ejercicio4.exe.config
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio4\Ejercicio4\Ejercicio4\bin\Debug\Ejercicio4.exe
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio4\Ejercicio4\Ejercicio4\bin\Debug\Ejercicio4.pdb
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio4\Ejercicio4\Ejercicio4\obj\Debug\Ejercicio4.exe
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio4\Ejercicio4\Ejercicio4\obj\Debug\Ejercicio4.pdb
