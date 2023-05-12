@@ -1,0 +1,8 @@
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio3\tp4\tp4\bin\Debug\tp4.exe.config
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio3\tp4\tp4\bin\Debug\tp4.exe
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio3\tp4\tp4\bin\Debug\tp4.pdb
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio3\tp4\tp4\obj\Debug\tp4.csproj.AssemblyReference.cache
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio3\tp4\tp4\obj\Debug\tp4.csproj.SuggestedBindingRedirects.cache
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio3\tp4\tp4\obj\Debug\tp4.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio3\tp4\tp4\obj\Debug\tp4.exe
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio3\tp4\tp4\obj\Debug\tp4.pdb
