@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,74 +24,40 @@ namespace Ejercicio6
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ingrese a cuantas personas quiere ingresar");
-            int iteraciones = Convert.ToInt32(Console.ReadLine());
-            string[] datos = new string[iteraciones*3];
-            int cont = 0;
-            int actual = 0;
-            int age_max = 0, age_min = 0, age_avg = 0;
+            //null-coalescing            
+            //Environment.NewLine
+            bool intentar = false;
+            int cant_per;
+            float avg_age;
+            int max_age;
+            int min_age;
 
-            for (int i = 1 ; i <= iteraciones ; i++)
+            Console.WriteLine("Ingrese a cuantas personas quieres ingresar");
+            do
             {
-                for (int j = 0 ; j <= 2 ; j++)
-                {
-                    switch (j)
-                    {
-                        case 0 :
-                            Console.WriteLine("Ingrese el nombre del usuario " + i);                            
-                        break;
-
-                        case 1 :
-                            Console.WriteLine("Ingrese el apellido del usuario " + i);
-                        break;
-                        
-                        case 2 :
-                            Console.WriteLine("Ingrese la edad del usuario " + i);
-                        break;
-                    }
-
-                    datos[i*j] = Console.ReadLine();
-                }
-            }
-
-            Console.WriteLine("");
-            
-            foreach (var i in datos)
-            {
+                string nums = Console.ReadLine();
+                intentar = int.TryParse(nums, out cant_per);
+                Console.WriteLine(!intentar ? "Ingrese un numero entero valido de cuantas personas quiere ingresar" : "");               
                 
-                bool successfullyParsed = int.TryParse(i, out int age);
-                if (successfullyParsed)
-                {
-                    //Console.WriteLine(age);
-                    
-                    if(cont == 0)
-                    {
-                        Console.WriteLine(datos[actual]);
-                        age_max = Convert.ToInt32(datos[actual]);
-                        age_min = age_max;
-                        cont++;
-                    }
-                    /*
-                    age_avg += age;
-                    if(age_max<age) 
-                    {
-                        age_max = age;
-                    }
-                    if (age_max < age)
-                    {
-                        age_max = age;
-                    }
-                    */
+            } while(!intentar);
+            
+            string[] nombres = new string[cant_per];
+            string[] apellidos = new string[cant_per];
+            int[] edades = new int[cant_per];
 
-                }
+            for(int i = 0; i < cant_per; i++){
+
+                Console.WriteLine(Environment.NewLine + "Ingrese el nombre del usuario {0}", i);
+                nombres[i] = Console.ReadLine();                
+                Console.WriteLine(Environment.NewLine + "Ingrese el apellido del usuario {0}", i);
+                apellidos[i] = Console.ReadLine();
+                Console.WriteLine(Environment.NewLine + "Ingrese la edad del usuario {0}", i);
+                edades[i] = Convert.ToInt32(Console.ReadLine());
             }
-            Console.WriteLine(age_max);
 
-            
-             
-             
-            
-
+            foreach(int i in edades) {
+                avg_age += i;
+            }
         }
     }
 }
