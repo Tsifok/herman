@@ -24,7 +24,7 @@ namespace Ejercicio4
             Console.WriteLine("Ingrese cuantos objetos quiere ingresar");
 
             int cantObj = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(cantObj);
+            //Console.WriteLine(cantObj);
             int comparador = 1;
             for (int i = 1; i <= cantObj; i++)
             {
@@ -47,17 +47,6 @@ namespace Ejercicio4
                 anteojo.precio = Convert.ToInt32(Console.ReadLine());
                 anteojo.mostrarDatos();
             }
-
-
-
-            
-
-
-            /*
-            anteojos anteojo = new anteojos(
-                Console.ReadLine(),15,"titanio",3,1500
-            );
-            */
             Console.ReadLine();
         }
                     

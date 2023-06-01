@@ -1,0 +1,8 @@
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio5\Ejercicio5-2\Ejercicio5-2\bin\Debug\Ejercicio5-2.exe.config
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio5\Ejercicio5-2\Ejercicio5-2\bin\Debug\Ejercicio5-2.exe
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio5\Ejercicio5-2\Ejercicio5-2\bin\Debug\Ejercicio5-2.pdb
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio5\Ejercicio5-2\Ejercicio5-2\obj\Debug\Ejercicio5-2.csproj.AssemblyReference.cache
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio5\Ejercicio5-2\Ejercicio5-2\obj\Debug\Ejercicio5-2.csproj.SuggestedBindingRedirects.cache
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio5\Ejercicio5-2\Ejercicio5-2\obj\Debug\Ejercicio5-2.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio5\Ejercicio5-2\Ejercicio5-2\obj\Debug\Ejercicio5-2.exe
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\Ejercicio5\Ejercicio5-2\Ejercicio5-2\obj\Debug\Ejercicio5-2.pdb
