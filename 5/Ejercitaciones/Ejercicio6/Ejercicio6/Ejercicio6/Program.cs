@@ -24,7 +24,7 @@ namespace Ejercicio6
     {
         static void Main(string[] args)
         {
-            //null-coalescing            
+            //null-coalescing (simbolo)  ??           
             //Environment.NewLine
             bool intentar = false;
             int cant_per;
