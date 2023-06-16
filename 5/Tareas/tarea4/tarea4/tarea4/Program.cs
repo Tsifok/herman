@@ -12,19 +12,71 @@ namespace tarea4
     internal class Program
     {
         static void Main(string[] args)
+        {   
+            // variables a utilizar luego
+            int sucursales;
+
+            // inicialiso el array de objs 
+            sucursales[] objSucursales = new sucursales[4];
+            for (int i = 0 ; i < objSucursales.Length ; i++) objSucursales[i] = new sucursales();
+            
+            // el siguinte for es para el ingreso de datos a los objs
+            for (int i = 0 ; i < objSucursales.Length ; i++)
+            {
+                /*  
+                    verifico que los numero de sucursales ingresados cumplan con las siguientes codiciones :
+                    Que sean enteros
+                    Que esten dentro del rango
+                    Que no esten repetidos
+                 */
+                Console.WriteLine("Ingrese el numero de sucursal (1 - 4) : ");
+                do
+                {
+                    sucursales = FuncionNumeroI();                    
+                    if (sucursales < 1 && sucursales != 100  || sucursales > 4 && sucursales != 100) Console.Write("Ingrese un numero entre 1 y 4 : ");
+                    if (sucursales == 100) Console.Write("Ingrese un numero de sucursal que no hayas ingresado antes : ");
+
+                    for (int j = 0; j < objSucursales.Length; j++)
+                    {
+                        if (objSucursales[j].numSucursal == sucursales)
+                        {                         
+                            Console.Write("El número de sucursal ya ha sido ingresado, por favor ingrese otro número : ");
+                            sucursales = 100;
+                        }
+                    }
+                }while (sucursales < 1 || sucursales > 4);
+                
+                
+                objSucursales[i].numSucursal = sucursales;
+
+
+
+
+
+
+            }
+
+        }
+
+        // valida el tipo de dato ( que sea int )  
+        public static int FuncionNumeroI()
         {
-           /* int sucursales = 0;
             bool resultado;
+            int salida;            
             do
             {
-                Console.WriteLine("Ingrese la cantidad de pentagonos");
-                resultado = int.TryParse(Console.ReadLine(), out sucursales);
-                if (!resultado) Console.WriteLine("Error, debe ingresar un numero");
+                string entrada = Console.ReadLine();
+                resultado = int.TryParse(entrada, out salida);
+                if(!resultado) Console.Write($"Ingrese un numero ENTERO : ");
+
             } while (!resultado);
-           */
+            
+            return salida;
         }
     }
-public class sucursales
+
+
+    public class sucursales
     {
         //constructor
         public sucursales() 
@@ -59,7 +111,5 @@ public class sucursales
 
         }
     
-    }
-
-
+    }    
 }
