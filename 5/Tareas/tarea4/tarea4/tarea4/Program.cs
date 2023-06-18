@@ -76,21 +76,31 @@ namespace tarea4
 
                 Console.Write($"Ingrese el monto de venta de la socursal de {objSucursales[i].nombreSucursal} : ");
                 objSucursales[i].montoVenta = FuncionNumeroI();
-                Console.Write($"Ingrese el numero de clinetes que tuvo esta sucursal durante este mes : ");
+                Console.Write("Ingrese el numero de clinetes que tuvo esta sucursal durante este mes : ");
                 objSucursales[i].cantClientes = FuncionNumeroI();
 
-                Console.Write($"Ahora ingrese el numero de empleados de esta sucursal : ");
+                Console.Write("Ahora ingrese el numero de empleados de esta sucursal : ");
                 objSucursales[i].cantEmpleados = FuncionNumeroI();
 
-                for (int j = 0; j < objSucursales[i].cantEmpleados; j++)
+                Console.Write("Ahora por favor, ingrese el nombre de cada uno de los empleados : ");
+                do
                 {
-                    Console.Write($"Ahora por favor, ingrese el nombre de cada uno de los empleados : ");
+                    for (int j = 0; j < objSucursales[i].cantEmpleados; j++)
+                    {
+                        Console.Write($"{Environment.NewLine}Nombre de empleado : ");
+                        Console.ReadLine();
 
-                }
-
-
-
+                    }
+                    Console.WriteLine("Si no esta conforme con el ingreso de nombres escriba a continuacion NO : ");
+                    if ((Console.ReadLine()).Equals("NO", StringComparison.OrdinalIgnoreCase))
+                    {
+                        bandera = false;
+                    }
+                } while (!bandera);              
             }
+
+            //Se empieza a mostrar los datos 
+
 
         }
 
