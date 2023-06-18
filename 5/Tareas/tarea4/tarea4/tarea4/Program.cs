@@ -100,7 +100,10 @@ namespace tarea4
             }
 
             //Se empieza a mostrar los datos 
-
+            for (int i = 0; i < objSucursales.Length; i++) 
+            { 
+                
+            }
 
         }
 
@@ -125,9 +128,8 @@ namespace tarea4
     public class sucursales
     {
         //constructor
-        public sucursales() 
-        { 
-        }
+        public sucursales() { }
+        
         //atributos
         public string nombreSucursal;
         public int numSucursal;
@@ -135,6 +137,7 @@ namespace tarea4
         public int cantEmpleados;
         public int cantClientes;
         public string nombreEmpleado;
+        
         //metodos
         public void calcPromVentas()
         {
