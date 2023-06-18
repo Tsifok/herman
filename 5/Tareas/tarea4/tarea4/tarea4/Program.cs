@@ -79,16 +79,26 @@ namespace tarea4
                 Console.Write("Ingrese el numero de clinetes que tuvo esta sucursal durante este mes : ");
                 objSucursales[i].cantClientes = FuncionNumeroI();
 
-                Console.Write("Ahora ingrese el numero de empleados de esta sucursal : ");
-                objSucursales[i].cantEmpleados = FuncionNumeroI();
+                do
+                {
+                    if (!bandera)
+                    {
+                        Console.WriteLine("Ingrese un numero distinto de 0");
+                    }
+                    Console.Write("Ahora ingrese el numero de empleados de esta sucursal : ");
+                    objSucursales[i].cantEmpleados = FuncionNumeroI();
+                    bandera = (objSucursales[i].cantEmpleados == 0) ? false : true;
+                } while (!bandera);
+                // defino el espacio del array que contendra los nombres 
+                objSucursales[i].definirArreglo(objSucursales[i].cantEmpleados);
 
-                Console.Write("Ahora por favor, ingrese el nombre de cada uno de los empleados : ");
+                Console.Write("Ahora por favor, ingrese el nombre de cada uno de los empleados : ");                
                 do
                 {
                     for (int j = 0; j < objSucursales[i].cantEmpleados; j++)
                     {
                         Console.Write($"{Environment.NewLine}Nombre de empleado : ");
-                        Console.ReadLine();
+                        objSucursales[i].nombreEmpleado[j] = Console.ReadLine();
 
                     }
                     Console.WriteLine("Si no esta conforme con el ingreso de nombres escriba a continuacion NO : ");
@@ -96,15 +106,25 @@ namespace tarea4
                     {
                         bandera = false;
                     }
+                    else
+                    {
+                        bandera = true;
+                    }
                 } while (!bandera);              
             }
 
             //Se empieza a mostrar los datos 
             for (int i = 0; i < objSucursales.Length; i++) 
-            { 
-                
-            }
+            {
 
+                Console.WriteLine($"{Environment.NewLine}Sucursal de {objSucursales[i].nombreSucursal} : ");
+                Console.Write("Los empleados de esta sucursal son : ");
+                for (int j = 0; j < objSucursales[i].cantEmpleados; j++)
+                {
+                    Console.Write($"{Environment.NewLine} \t {objSucursales[i].nombreEmpleado[j]}");
+                }                
+            }
+            Console.ReadLine();
         }
 
         // valida el tipo de dato ( que sea int )  
@@ -136,7 +156,7 @@ namespace tarea4
         public int montoVenta;
         public int cantEmpleados;
         public int cantClientes;
-        public string nombreEmpleado;
+        public string[] nombreEmpleado;
         
         //metodos
         public void calcPromVentas()
@@ -159,6 +179,10 @@ namespace tarea4
         {
 
         }
-    
+        public void definirArreglo(int cant)
+        {
+            nombreEmpleado = new string[cant];
+        }
+
     }    
 }
