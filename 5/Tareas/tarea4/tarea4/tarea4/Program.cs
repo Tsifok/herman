@@ -15,6 +15,7 @@ namespace tarea4
         {   
             // variables a utilizar luego
             int sucursales;
+            bool bandera = true;
 
             // inicialiso el array de objs 
             sucursales[] objSucursales = new sucursales[4];
@@ -29,7 +30,7 @@ namespace tarea4
                     Que esten dentro del rango
                     Que no esten repetidos
                  */
-                Console.WriteLine("Ingrese el numero de sucursal (1 - 4) : ");
+                Console.Write("Ingrese el numero de sucursal (1 - 4) : ");
                 do
                 {
                     sucursales = FuncionNumeroI();                    
@@ -39,18 +40,53 @@ namespace tarea4
                     for (int j = 0; j < objSucursales.Length; j++)
                     {
                         if (objSucursales[j].numSucursal == sucursales)
-                        {                         
-                            Console.Write("El número de sucursal ya ha sido ingresado, por favor ingrese otro número : ");
-                            sucursales = 100;
+                        {
+                            Console.Write($"Ya se han ingresado datos a la sucursal a la que quiere ingresar ¿ Desea editarla ? {Environment.NewLine}SI para continuar : ");
+                            // .Ecuals es para comparar cadenas 
+                            // StringComparison.OrdinalIgnoreCase para evitar que cuando se iguela los string Min = May no haya problemas 
+                            // Break termina la secuencia siguinte 
+                            if ( (Console.ReadLine()).Equals("SI", StringComparison.OrdinalIgnoreCase) ) { break; }
+                            else
+                            {
+                                Console.Write("Por favor ingrese otro número : ");
+                                sucursales = 100;
+                            }                                                        
                         }
                     }
                 }while (sucursales < 1 || sucursales > 4);
                 
-                
+                // cargo el numero ingresado al obj.atrib
                 objSucursales[i].numSucursal = sucursales;
+                // dependiendo del numero de sucursal es el nombre de esta 
+                switch (sucursales)
+                {
+                    case 1:
+                        objSucursales[i].nombreSucursal = "Once";
+                    break;
+                    case 2:
+                        objSucursales[i].nombreSucursal = "San Nicolas";
+                    break;
+                    case 3:
+                        objSucursales[i].nombreSucursal = "Almagro";
+                    break;
+                    case 4:
+                        objSucursales[i].nombreSucursal = "Microcentro";
+                    break;
+                }
 
+                Console.Write($"Ingrese el monto de venta de la socursal de {objSucursales[i].nombreSucursal} : ");
+                objSucursales[i].montoVenta = FuncionNumeroI();
+                Console.Write($"Ingrese el numero de clinetes que tuvo esta sucursal durante este mes : ");
+                objSucursales[i].cantClientes = FuncionNumeroI();
 
+                Console.Write($"Ahora ingrese el numero de empleados de esta sucursal : ");
+                objSucursales[i].cantEmpleados = FuncionNumeroI();
 
+                for (int j = 0; j < objSucursales[i].cantEmpleados; j++)
+                {
+                    Console.Write($"Ahora por favor, ingrese el nombre de cada uno de los empleados : ");
+
+                }
 
 
 
