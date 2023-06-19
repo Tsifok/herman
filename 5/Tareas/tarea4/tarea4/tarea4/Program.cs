@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -122,8 +123,12 @@ namespace tarea4
                 for (int j = 0; j < objSucursales[i].cantEmpleados; j++)
                 {
                     Console.Write($"{Environment.NewLine} \t {objSucursales[i].nombreEmpleado[j]}");
-                }                
+                }
+                
             }
+            objSucursales[0].calcPromVentas(objSucursales);
+            objSucursales[0].calcPromEmpleados(objSucursales);
+            objSucursales[0].calcVentaTotal(objSucursales);
             Console.ReadLine();
         }
 
@@ -159,17 +164,54 @@ namespace tarea4
         public string[] nombreEmpleado;
         
         //metodos
-        public void calcPromVentas()
+        public void calcPromVentas(sucursales[] objSucursales)
         {
+            int lim = 4;
+            int sum = 0;
+            float prom = 0;
+
+            // calculo del promedio de ventas
+            for (int i = 0; i < lim; i++)
+{
+                sum = sum + objSucursales[i].montoVenta;
+            }
+            prom = sum / lim;
+      
+            Console.Write($"{Environment.NewLine}");
+            Console.Write("El promedio de ventas es de {0} ventas.",prom);
+
 
         }
-        public void calcPromEmpleados()
+        public void calcPromEmpleados(sucursales[] objSucursales)
         {
+            int lim = 4;
+            int sum = 0;
+            float prom = 0;
+
+            // calculo del promedio de empleados
+            for (int i = 0; i < lim; i++)
+            {
+                sum = sum + objSucursales[i].cantEmpleados;
+            }
+            prom = sum / lim;
+
+            Console.Write($"{Environment.NewLine}");
+            Console.Write("El promedio de empleados es de {0} empleados.", prom);
 
         }
-        public void calcVentaTotal()
+        public void calcVentaTotal(sucursales[] objSucursales)
         {
+            int sum = 0;
+            int lim = 4;
 
+            // calculo la venta total
+            for (int i = 0; i < lim; i++)
+            {
+                sum = sum + objSucursales[i].montoVenta;
+            }
+ 
+            Console.Write($"{Environment.NewLine}");
+            Console.Write("La suma total de las ventas es de {0} ventas.", sum);
         }
         public void ventaMax()
         {
