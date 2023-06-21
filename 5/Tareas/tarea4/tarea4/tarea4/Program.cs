@@ -93,12 +93,12 @@ namespace tarea4
                 // defino el espacio del array que contendra los nombres 
                 objSucursales[i].definirArreglo(objSucursales[i].cantEmpleados);
 
-                Console.Write("Ahora por favor, ingrese el nombre de cada uno de los empleados : ");                
+                Console.Write($"Ahora por favor, ingrese el nombre de cada uno de los empleados : {Environment.NewLine}");                
                 do
                 {
                     for (int j = 0; j < objSucursales[i].cantEmpleados; j++)
                     {
-                        Console.Write($"{Environment.NewLine}Nombre de empleado : ");
+                        Console.Write($"Nombre de empleado : ");
                         objSucursales[i].nombreEmpleado[j] = Console.ReadLine();
 
                     }
@@ -127,6 +127,8 @@ namespace tarea4
                 
             }
             objSucursales[0].calcPromVentas(objSucursales);
+            objSucursales[0].ventaMax(objSucursales);
+            objSucursales[0].ventaMin(objSucursales);
             objSucursales[0].calcPromEmpleados(objSucursales);
             objSucursales[0].calcVentaTotal(objSucursales);
             Console.ReadLine();
@@ -213,13 +215,39 @@ namespace tarea4
             Console.Write($"{Environment.NewLine}");
             Console.Write("La suma total de las ventas es de {0} ventas.", sum);
         }
-        public void ventaMax()
+        public void ventaMax(sucursales[] objSucursales)
         {
+            int comp = objSucursales[0].montoVenta;
+            string nomb = objSucursales[0].nombreSucursal;
+            int lim = 4;
 
+            for (int i = 0; i < lim; i++)
+            {
+                if(objSucursales[i].montoVenta  > comp)
+                {
+                    comp = objSucursales[i].montoVenta;
+                    nomb = objSucursales[i].nombreSucursal;
+                }
+            }
+
+            Console.Write($"{Environment.NewLine}El monto maximo es de {comp} y le pertenece a la sucursal de {nomb}");
         }
-        public void ventaMin()
+        public void ventaMin(sucursales[] objSucursales)
         {
+            int comp = objSucursales[0].montoVenta;
+            string nomb = objSucursales[0].nombreSucursal;
+            int lim = 4;
 
+            for (int i = 0; i < lim; i++)
+            {
+                if (objSucursales[i].montoVenta < comp)
+                {
+                    comp = objSucursales[i].montoVenta;
+                    nomb = objSucursales[i].nombreSucursal;
+                }
+            }
+
+            Console.Write($"{Environment.NewLine}El monto minimo es de {comp} y le pertenece a la sucursal de {nomb}");
         }
         public void definirArreglo(int cant)
         {
