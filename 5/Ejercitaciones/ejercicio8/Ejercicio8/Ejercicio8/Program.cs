@@ -42,9 +42,24 @@ namespace Ejercicio8
 
             //functions.FuncionY();
             //archivo.nombre_dela_funcion
+
+            objCurso.turno = (Console.ReadLine());
+            Console.Write("Ingrese especialidad : ");
+            objCurso.especialidad = (Console.ReadLine());
+            Console.Write("Ingrese la cantidad de alumnos que hay en dicho Curso : ");
+            int cantAlumnos = functions.FuncionIP(0,1,true);
+            objCurso.resize(cantAlumnos);
+
+            for (int i = 1; i <= cantAlumnos; i++){
+                Console.Write($"Ingrese el promedio del alumno {i} : ");
+                objCurso.promedios[i-1] = functions.FuncionIP(10,1);
+            }
+
+
+
         }
     }
-
+    // ERROR por no definir tamaño de array 
     public class curso
     {
         //Constructor
@@ -56,5 +71,27 @@ namespace Ejercicio8
         public string especialidad;
         public int alumnos;
         public int[] edades;
+        public int[] promedios;
+
+        public int mejorResultado(curso objCurso, int cantAlumns)
+        {
+            int val = objCurso.promedios[0];
+
+            for (int i = 1; i >= cantAlumns; i++)
+            {                
+                if(val < objCurso.promedios[i])
+                {
+                    val = objCurso.promedios[i];
+                }
+            }
+
+
+            return val;
+        }
+
+        public void resize(int newsize) 
+        {
+            promedios = new int[newsize];
+        }
     }
 }

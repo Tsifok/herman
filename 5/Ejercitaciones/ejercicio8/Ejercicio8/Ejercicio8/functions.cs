@@ -8,6 +8,7 @@ namespace Ejercicio8
 {
     internal class functions
     {
+        //Funcion para verificar que un numero es un valor entre un rango de valroes
         public static int FuncionIP(int max = 0, int min= 0, bool cero = false)
         {
             bool resultado;
