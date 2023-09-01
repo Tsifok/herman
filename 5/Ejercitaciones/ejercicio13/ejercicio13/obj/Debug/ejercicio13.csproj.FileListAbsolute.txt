@@ -1,0 +1,8 @@
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\ejercicio13\ejercicio13\bin\Debug\ejercicio13.exe.config
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\ejercicio13\ejercicio13\bin\Debug\ejercicio13.exe
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\ejercicio13\ejercicio13\bin\Debug\ejercicio13.pdb
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\ejercicio13\ejercicio13\obj\Debug\ejercicio13.csproj.AssemblyReference.cache
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\ejercicio13\ejercicio13\obj\Debug\ejercicio13.csproj.SuggestedBindingRedirects.cache
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\ejercicio13\ejercicio13\obj\Debug\ejercicio13.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\ejercicio13\ejercicio13\obj\Debug\ejercicio13.exe
+C:\xampp\htdocs\herman\herman\5\Ejercitaciones\ejercicio13\ejercicio13\obj\Debug\ejercicio13.pdb
