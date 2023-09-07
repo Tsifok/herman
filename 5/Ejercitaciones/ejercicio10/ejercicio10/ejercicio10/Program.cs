@@ -28,10 +28,7 @@ namespace ejercicio10
                 else
                 {
                     return n * calculoFactorial(n - 1);
-                }
-             
-
-                
+                }                            
             }
 
         }

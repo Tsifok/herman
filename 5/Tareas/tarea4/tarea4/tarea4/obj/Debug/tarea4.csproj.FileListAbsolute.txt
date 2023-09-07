@@ -14,3 +14,11 @@ C:\xampp\htdocs\amenta\herman\5\Tareas\tarea4\tarea4\tarea4\obj\Debug\tarea4.csp
 C:\xampp\htdocs\amenta\herman\5\Tareas\tarea4\tarea4\tarea4\obj\Debug\tarea4.csproj.CoreCompileInputs.cache
 C:\xampp\htdocs\amenta\herman\5\Tareas\tarea4\tarea4\tarea4\obj\Debug\tarea4.exe
 C:\xampp\htdocs\amenta\herman\5\Tareas\tarea4\tarea4\tarea4\obj\Debug\tarea4.pdb
+C:\xampp\htdocs\herman\herman\5\Tareas\tarea4\tarea4\tarea4\bin\Debug\tarea4.exe.config
+C:\xampp\htdocs\herman\herman\5\Tareas\tarea4\tarea4\tarea4\bin\Debug\tarea4.exe
+C:\xampp\htdocs\herman\herman\5\Tareas\tarea4\tarea4\tarea4\bin\Debug\tarea4.pdb
+C:\xampp\htdocs\herman\herman\5\Tareas\tarea4\tarea4\tarea4\obj\Debug\tarea4.csproj.AssemblyReference.cache
+C:\xampp\htdocs\herman\herman\5\Tareas\tarea4\tarea4\tarea4\obj\Debug\tarea4.csproj.SuggestedBindingRedirects.cache
+C:\xampp\htdocs\herman\herman\5\Tareas\tarea4\tarea4\tarea4\obj\Debug\tarea4.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\herman\herman\5\Tareas\tarea4\tarea4\tarea4\obj\Debug\tarea4.exe
+C:\xampp\htdocs\herman\herman\5\Tareas\tarea4\tarea4\tarea4\obj\Debug\tarea4.pdb
