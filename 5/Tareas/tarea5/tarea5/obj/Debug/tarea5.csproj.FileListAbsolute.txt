@@ -1,0 +1,11 @@
+C:\xampp\htdocs\amenta\herman\5\Tareas\tarea5\tarea5\bin\Debug\tarea5.exe.config
+C:\xampp\htdocs\amenta\herman\5\Tareas\tarea5\tarea5\bin\Debug\tarea5.exe
+C:\xampp\htdocs\amenta\herman\5\Tareas\tarea5\tarea5\bin\Debug\tarea5.pdb
+C:\xampp\htdocs\amenta\herman\5\Tareas\tarea5\tarea5\obj\Debug\tarea5.csproj.AssemblyReference.cache
+C:\xampp\htdocs\amenta\herman\5\Tareas\tarea5\tarea5\obj\Debug\tarea5.csproj.SuggestedBindingRedirects.cache
+C:\xampp\htdocs\amenta\herman\5\Tareas\tarea5\tarea5\obj\Debug\tarea5.Form1.resources
+C:\xampp\htdocs\amenta\herman\5\Tareas\tarea5\tarea5\obj\Debug\tarea5.Properties.Resources.resources
+C:\xampp\htdocs\amenta\herman\5\Tareas\tarea5\tarea5\obj\Debug\tarea5.csproj.GenerateResource.cache
+C:\xampp\htdocs\amenta\herman\5\Tareas\tarea5\tarea5\obj\Debug\tarea5.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\amenta\herman\5\Tareas\tarea5\tarea5\obj\Debug\tarea5.exe
+C:\xampp\htdocs\amenta\herman\5\Tareas\tarea5\tarea5\obj\Debug\tarea5.pdb
